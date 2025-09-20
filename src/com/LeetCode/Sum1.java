@@ -6,6 +6,7 @@
 package com.LeetCode;
 
 import java.util.HashMap;
+import java.util.*;
 
 public class Sum1 {
     public static void main(String args[]){

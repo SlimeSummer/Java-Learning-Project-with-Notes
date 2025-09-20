@@ -1,17 +1,17 @@
 package com.practice;
 
+import java.io.PrintStream;
+import java.util.*;
+
 public class Practice {
     public static void main (String[] args) {
-        int sum=0;
-        for (int i=0; i<5; i++){
-            sum+=i;
-            System.out.println("i:"+ i);
-            System.out.println("sum:"+ sum);
+        Scanner s=new Scanner(System.in);
+        int i=0;
+        while(s.hasNext()){
+            System.out.print(s.next()+" ");
+            i++;
         }
-        System.out.println("1");
-        System.out.println("2");
-        System.out.println("3");
-        System.out.println("4");
-        System.out.println("5");
+        s.close();
+        System.out.println(i);
     }
 }

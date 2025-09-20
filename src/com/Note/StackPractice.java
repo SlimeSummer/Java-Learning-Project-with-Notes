@@ -1,4 +1,4 @@
-//用Java模拟栈的工作及栈的应用
+//用Java模拟栈的工作及栈的应用，处理括号匹配
 package com.Note;
 
 public class StackPractice {
