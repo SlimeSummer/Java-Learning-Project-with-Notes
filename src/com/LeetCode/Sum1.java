@@ -13,7 +13,7 @@ public class Sum1 {
         int target=14;
         int[] nums={2,6,4,8,3};
         int[] index;
-        index=Solution2.twoSum(nums,target);
+        index=Sum1Solution2.twoSum(nums,target);
         for (int i=0;i< index.length;i++){
             System.out.println("value="+nums[index[i]]+" index="+index[i]);
         }
@@ -22,7 +22,7 @@ public class Sum1 {
 
 // 解法1：暴力枚举
 // 时间:O(n²)
-class Solution {
+class Sum1Solution {
     public static int[] twoSum(int[] nums, int target) {
         for (int i=0;i< nums.length;i++){
             for (int j=i+1;j< nums.length;j++){
@@ -37,7 +37,7 @@ class Solution {
 
 // 解法2：哈希集合
 // 时间:O(n)
-class Solution2{
+class Sum1Solution2{
     public static int[] twoSum(int[] nums,int target){  //利用hashmap查找，时间复杂度仅为O(n)
         HashMap<Integer,Integer> map=new HashMap<>();
         for (int i=0;i< nums.length;i++){
