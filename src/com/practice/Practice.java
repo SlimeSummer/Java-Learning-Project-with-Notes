@@ -2,32 +2,25 @@ package com.practice;
 
 import java.util.*;
 
-public class Practice {
-    public static void main(String args[]) {
-        int[] arr=new int[]{4,7,1,3,9,4,6,2,4,8};
-        for (int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
-        }
-        System.out.println();
-        shellSort(arr);
-        for (int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
-        }
-    }
+public class Practice{
+    public static void main(String args[]){
+        Scanner scanner=new Scanner(System.in);
+        int n=scanner.nextInt();
+        int x=scanner.nextInt();
+        Map<Integer, Integer> map=new HashMap<>();
 
-    private static void shellSort(int[] arr){
-        for (int gap=arr.length/2;gap>0;gap/=2) {
-            for (int group=0;group<gap;group++){
-                for (int end=group;end+gap<arr.length;end+=gap){
-                    int nextData=arr[end+gap];
-                    int index=end;
-                    while(index>=group && arr[index]>nextData){
-                        arr[index+gap]=arr[index];
-                        index-=gap;
-                    }
-                    arr[index+gap]=nextData;
-                }
-            }
+        for(int i=0; i<n; i++){
+            int val= scanner.nextInt();
+            map.put(val, map.getOrDefault(val,0)+1);
         }
+
+        int max=0;
+        for (int count : map.values()){
+            if (count > max)
+                max=count;
+        }
+
+        System.out.println(max- map.getOrDefault(x,0));
     }
 }
+

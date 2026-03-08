@@ -1,9 +1,8 @@
-//题目链接：https://ac.nowcoder.com/acm/problem/313076
-package com.Contest;
+package com.LeetCode;
 
 import java.util.*;
 
-public class Main{
+public class NowCoder1 {
     public static void main(String args[]){
         Scanner scanner=new Scanner(System.in);
         int n=scanner.nextInt();
